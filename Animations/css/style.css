@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #C8102E;
+}
+
+.goal-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.goal {
+    color: #fff;
+    margin: 0px;
+    animation: textzooming 4.7s cubic-bezier(0.68,-0.55,0.265,1.55) forwards;
+}
+
+@keyframes textzooming {
+    0% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    25% {
+        transform: scale(8.5);
+        
+    }
+    50%{
+        transform: scale(7);
+    }
+    75% {
+        transform: scale(8.5);
+    }
+    90% {
+        transform: scale(3);
+    }
+    100%{
+        transform: translateY(-100vh);
+    }
+}
+
+.scored-by-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.scored-by-name p {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0px;
+    color: #fff;
+}
+
+.scored-by-name img {
+    height: 200px;
+    opacity: 0;
+    animation: scoredby 5s ease-in-out forwards;
+    animation-delay: 4.7s;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    margin-left: 50px;
+    animation: scoredbyfortext 5s ease-in-out forwards;
+    animation-delay: 4.7s;
+}
+
+@keyframes scoredby {
+    0% {
+        opacity: 1;
+        transform: translate(-100vw);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0vw);
+    }
+    90% {
+        opacity: 1;
+        transform: translate(0vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-100vw);
+    }
+}
+
+@keyframes scoredbyfortext {
+    0%{
+        opacity: 1;
+        transform: translate(100vw);
+    }
+
+    50%{
+        opacity: 1;
+        transform: translate(0vw);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translate(0vw);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(130vw);
+    }
+}
+
+.total-score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.total-score-container img {
+    height: 200px;
+}
+
+.red-team {
+    opacity: 0;
+    animation: scoredbyredteam 5s ease-in-out forwards;
+    animation-delay: 7.7s;
+}
+
+.yellow-team {
+    opacity: 0;
+    animation: scoredbyyellowteam 5s ease-in-out forwards;
+    animation-delay: 7.7s;
+}
+
+.total-score {
+    display: flex;
+    flex-direction: row;
+}
+
+.scores-container {
+    margin: 0px 50px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.score-time {
+    font-size: 20px;
+    text-align: center;
+}
+
+.general-score {
+    font-size: 50px;
+}
+
+.scores-container p {
+    margin: 0;
+    animation: generalscore 5s forwards;
+    animation-delay: 7.7s;
+    opacity: 0;
+}
+
+.scored-by-players {
+    display: flex;
+    opacity: 0;
+    animation: scoredbyplayers 5s forwards;
+    animation-delay: 7.7s;
+}
+
+.scored-by-players ul {
+    list-style: none;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 270px;
+}
+
+@keyframes generalscore {
+    0% {
+        opacity: 1;
+        transform: translateY(-100vh);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes scoredbyredteam {
+    0% {
+        opacity: 1;
+        transform: translate(-100vw);
+    }
+
+    50%{
+        opacity: 1;
+        transform: translate(-100vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0vw);
+    }
+
+}
+
+@keyframes scoredbyyellowteam {
+    0%{
+        opacity: 1;
+        transform: translate(100vw);
+    }
+
+    50%{
+        opacity: 1;
+        transform: translate(100vw);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0vw);
+    }
+
+}
+
+@keyframes scoredbyplayers {
+    0%{
+        opacity: 1;
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
+
+.coefficiet {
+    position: relative;
+}
+
+.coefficiet .coefficient-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    animation: coefficientopacity 2s forwards;
+    animation-delay: 11.7s;
+    z-index: 1;
+}
+
+.coefficient-container p {
+    font-weight: bold;
+}
+
+.coefficiet-value {
+    font-size: 40px;
+}
+
+.coefficiet img {
+    margin: 0 30px;
+    opacity: 0;
+    animation: hexagonspin 2s 2 linear forwards;
+    animation-delay: 9.7s;
+}
+
+@keyframes hexagonspin {
+    0% {
+        opacity: 1;
+        transform: rotateY(360deg);
+    }
+
+    25% {
+        opacity: 1;
+        transform: rotateY(180deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes coefficientopacity {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
